@@ -121,6 +121,32 @@
     margin-top: 5px;
     font-size: 1em;
     color: #333;
+}.images {
+    display: flex;
+    flex-wrap: wrap;              /* Allows wrapping if needed */
+    gap: 20px;                    /* Space between image boxes */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image {
+    flex: 1 1 calc(33.33% - 20px); /* Each gets about a third of the width, minus gap */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;                  /* Image fills container width */
+    height: auto;                 /* Maintain aspect ratio */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+}
+
+.image p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
 }
     </style>
 </head>
