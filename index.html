@@ -3,66 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Was kaufe ich?</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Das ABC Worksheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 900px;
+            background: #fff;
+            border: 3px solid #000;
+            padding: 25px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-top: 25px;
+        }
+        .alphabet {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 15px;
+            padding: 10px;
+        }
+        .letter {
+            background-color: #8DC63F;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        .word-snake {
+            font-size: 20px;
+            font-weight: bold;
+            color: #E74C3C;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .image-box {
+            width: 28%;
+            text-align: center;
+        }
+        .image-box img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        .input {
+            width: 90%;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .fill-blanks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .blank-box {
+            text-align: center;
+            width: 48%;
+        }
+        .blank-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <div class="worksheet">
-        <header>
-            <div class="header-row">
-                <span>NAME ....................................................</span>
-                <span>CLASS ....................</span>
-                <span>DATE ....................</span>
+    <div class="container">
+        <div class="header">
+            <span>NAME ...........................................................</span>
+            <span>CLASS .................</span>
+            <span>DATE ....................</span>
+        </div>
+        <div class="title">Das ABC</div>
+        <div class="section">
+            <strong>2 Look at the alphabet. Listen and mark the letters you hear.</strong>
+            <div class="alphabet">
+                <div class="letter">A</div> <div class="letter">B</div> <div class="letter">C</div>
+                <div class="letter">D</div> <div class="letter">E</div> <div class="letter">F</div>
+                <div class="letter">G</div> <div class="letter">H</div> <div class="letter">I</div>
+                <div class="letter">J</div> <div class="letter">K</div> <div class="letter">L</div>
+                <div class="letter">M</div> <div class="letter">N</div> <div class="letter">O</div>
+                <div class="letter">P</div> <div class="letter">Q</div> <div class="letter">R</div>
+                <div class="letter">S</div> <div class="letter">T</div> <div class="letter">U</div>
+                <div class="letter">V</div> <div class="letter">W</div> <div class="letter">X</div>
+                <div class="letter">Y</div> <div class="letter">Z</div>
             </div>
-            <h1>Was kaufe ich? <span class="lektion">LEKTION 2</span></h1>
-            <div class="subtitle">
-                <span>MEINE VOKABELN</span>
+        </div>
+        <div class="section">
+            <strong>3 Look at the word snake and find the words that match the photos below.</strong>
+            <div class="word-snake">EMESSENILAFFENEVOGELOSTOHRSULBANKOLIMAUSE</div>
+            <div class="images">
+                <div class="image-box"><img src="monkey.png" alt="Monkey"><input class="input" type="text"></div>
+                <div class="image-box"><img src="chair.png" alt="Bench"><input class="input" type="text"></div>
+                <div class="image-box"><img src="mouse.png" alt="Mouse"><input class="input" type="text"></div>
+                <div class="image-box"><img src="bird.png" alt="Bird"><input class="input" type="text"></div>
+                <div class="image-box"><img src="food.png" alt="Food"><input class="input" type="text"></div>
+                <div class="image-box"><img src="dog.png" alt="Dog ear"><input class="input" type="text"></div>
             </div>
-        </header>
-
-        <section class="exercise">
-            <h2><span class="number-circle">1</span> GESCHENKE</h2>
-            <p>
-                <img src="sound-icon.png" alt="Sound Icon" class="sound-icon">
-                <span class="bold">Listen</span> to Marc and Anna speaking about a gift for Noah.
-            </p>
-            <ol>
-                <li>Über welche drei Geschenke sprechen Marc und Anna? <span class="line">.......................................................</span></li>
-                <li>Was kaufen Marc und Anna am Ende? <span class="line">.......................................................</span></li>
-                <li>Warum kaufen sie das Geschenk? <span class="highlight">Sie kaufen ...</span> <span class="line">.......................................................</span>, <span class="highlight">denn ...</span> <span class="line">.......................................................</span></li>
-            </ol>
-        </section>
-
-        <section class="exercise">
-            <h2><span class="number-circle">2</span> PREISE NENNEN</h2>
-            <h3>A. Read the following conversation.</h3>
-            <div class="conversation">
-                <p><strong>Klara:</strong> Ich möchte gern ein T-Shirt mit „I love Zürich“ in Größe S.</p>
-                <p><strong>Verkäufer:</strong> Gut – wie findest du das weiße hier? Es kostet 33 Franken.</p>
-                <p><strong>K:</strong> Oh, das ist aber teuer.</p>
-                <p><strong>V:</strong> Dieses hier kostet nur 18 Franken. Aber wir haben nur die Größe L.</p>
-                <p><strong>K:</strong> Das passt nicht. Ich möchte auch kein gelbes T-Shirt. Es ist nicht so schön. Ich möchte ein T-Shirt in Schweizer Farben: Rot und Weiß.</p>
-                <p><strong>V:</strong> Ah ja, wir haben rote T-Shirts mit 20% Rabatt. Das kostet nicht 27 Franken, es kostet jetzt nur 21,60 Franken. Wir haben es auch in Größe S.</p>
-                <p><strong>K:</strong> Das ist super. Das nehme ich.</p>
-                <p><strong>V:</strong> Ja, gerne, das macht dann 21,60 Franken.</p>
-                <p><strong>K:</strong> Gut, ich zahle bar.</p>
+        </div>
+        <div class="section">
+            <strong>4 Listen to the words. Fill in the missing vowels.</strong>
+            <div class="fill-blanks">
+                <div class="blank-box"><img src="aeiou.png" alt="AEIOU"></div>
+                <div class="blank-box"><img src="image.png" alt="Image"></div>
             </div>
-            <div class="tshirt-images">
-                <img src="white-shirt.png" alt="White T-Shirt">
-                <img src="yellow-shirt.png" alt="Yellow T-Shirt">
-                <img src="red-shirt.png" alt="Red T-Shirt">
-            </div>
-        </section>
-
-        <section class="exercise">
-            <h3>B. Decide if the following sentences are true or false by drawing an X on (T) or (F).</h3>
-            <ul class="true-false">
-                <li>1. Das gelbe T-Shirt ist günstig. <span class="tf">T</span> <span class="tf">F</span></li>
-                <li>2. Klara möchte ein rot-weißes T-Shirt. <span class="tf">T</span> <span class="tf">F</span></li>
-                <li>3. Das rote T-Shirt kostet 27 Franken. <span class="tf">T</span> <span class="tf">F</span></li>
-                <li>4. Klara zahlt mit Kreditkarte. <span class="tf">T</span> <span class="tf">F</span></li>
-            </ul>
-        </section>
+        </div>
     </div>
 </body>
 </html>
