@@ -4,220 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Das ABC Worksheet</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            width: 900px;
-            background: #fff;
-            border: 3px solid #000;
-            padding: 25px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        .title {
-            font-size: 28px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .section {
-            margin-top: 25px;
-        }
-        .alphabet {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 15px;
-            padding: 10px;
-        }
-        .letter {
-            background-color: #8DC63F;
-            padding: 15px;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            border-radius: 8px;
-        }
-        .word-snake {
-            font-size: 20px;
-            font-weight: bold;
-            color: #E74C3C;
-            text-align: center;
-            margin-top: 15px;
-        }
-        .images {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            justify-content: center;
-            margin-top: 15px;
-        }
-        .image-box {
-            width: 28%;
-            text-align: center;
-        }
-        .image-box img {
-            width: 100%;
-            height: auto;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-        }
-        .input {
-            width: 90%;
-            padding: 8px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .fill-blanks {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .blank-box {
-            text-align: center;
-            width: 48%;
-        }
-        .blank-box img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .images {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.image {
-    width: 32%; /* Ensures each image container takes up roughly one-third of the container */
-    text-align: center;
-}
-
-.image img {
-    width: 100%; /* Makes the image fill its container equally */
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: block;
-}
-
-.image p {
-    margin-top: 5px;
-    font-size: 1em;
-    color: #333;
-}.images {
-    display: flex;
-    flex-wrap: wrap;              /* Allows wrapping if needed */
-    gap: 20px;                    /* Space between image boxes */
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.image {
-    flex: 1 1 calc(33.33% - 20px); /* Each gets about a third of the width, minus gap */
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.image img {
-    width: 100%;                  /* Image fills container width */
-    height: auto;                 /* Maintain aspect ratio */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: block;
-}
-
-.image p {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #333;
-}
-        .images {
-    display: flex;
-    flex-wrap: wrap;              /* Allows wrapping if needed */
-    gap: 20px;                    /* Space between image boxes */
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.image {
-    flex: 1 1 calc(33.33% - 20px); /* Each gets about a third of the width, minus gap */
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.image img {
-    width: 100%;                  /* Image fills container width */
-    height: auto;                 /* Maintain aspect ratio */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: block;
-}
-
-.image p {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #333;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>NAME ...........................................................</span>
-            <span>CLASS .................</span>
-            <span>DATE ....................</span>
-        </div>
-        <div class="title">Das ABC</div>
-        <div class="section">
-            <strong>2 Look at the alphabet. Listen and mark the letters you hear.</strong>
-            <div class="alphabet">
-                <div class="letter">A</div> <div class="letter">B</div> <div class="letter">C</div>
-                <div class="letter">D</div> <div class="letter">E</div> <div class="letter">F</div>
-                <div class="letter">G</div> <div class="letter">H</div> <div class="letter">I</div>
-                <div class="letter">J</div> <div class="letter">K</div> <div class="letter">L</div>
-                <div class="letter">M</div> <div class="letter">N</div> <div class="letter">O</div>
-                <div class="letter">P</div> <div class="letter">Q</div> <div class="letter">R</div>
-                <div class="letter">S</div> <div class="letter">T</div> <div class="letter">U</div>
-                <div class="letter">V</div> <div class="letter">W</div> <div class="letter">X</div>
-                <div class="letter">Y</div> <div class="letter">Z</div>
+    <div class="worksheet">
+        <header>
+            <div class="header-row">
+                <span>NAME ....................................................</span>
+                <span>CLASS ....................</span>
+                <span>DATE ....................</span>
             </div>
-        </div>
-        <div class="section">
-            <strong>3 Look at the word snake and find the words that match the photos below.</strong>
-            <div class="word-snake">EMESSENILAFFENEVOGELOSTOHRSULBANKOLIMAUSE</div>
+            <h1>Das ABC</h1>
+        </header>
+
+        <section class="exercise">
+            <h2>5. A. Listen to these words. <span class="bold">Combine</span> the words and the sounds you hear and <span class="bold">say</span> them aloud. Then <span class="bold">listen</span> again and <span class="bold">check</span>.</h2>
+            <table class="words-table">
+                <thead>
+                    <tr>
+                        <th>write</th>
+                        <th>hear / speak</th>
+                        <th>write</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="highlight">Liebe</span></td>
+                        <td>like the English letter "i" as in <span class="italic">life</span></td>
+                        <td><span class="highlight">Europa</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">Einstein</span></td>
+                        <td>like the English letters "ee" as in <span class="italic">bee</span></td>
+                        <td><span class="highlight">Biene</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">Mäuse</span></td>
+                        <td>like the English letters "oy" as in <span class="italic">toy</span></td>
+                        <td><span class="highlight">zwei</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">mein</span></td>
+                        <td></td>
+                        <td><span class="highlight">Deutsch</span>, <span class="highlight">Wien</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
+        <section class="exercise">
+            <h2>B. Classify the words in the corresponding columns. <span class="bold">Highlight</span> the three sounds with different colors.</h2>
+            <table class="classification">
+                <thead>
+                    <tr>
+                        <th>IE</th>
+                        <th>EU / ÄU</th>
+                        <th>EI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
+        <section class="exercise">
+            <h2>C. Listen again and <span class="bold">read</span> the words aloud.</h2>
+        </section>
+    
+    
+    
+        <section class="exercise">
+            <h2>6. A. Listen and mark the names you hear.</h2>
+            <div class="checkbox-grid">
+                <div class="checkbox-item">
+                    <span>1. Wein</span>
+                    <input type="checkbox">
+                    <span>/</span>
+                    <span>Wien</span>
+                    <input type="checkbox">
+                </div>
+                <div class="checkbox-item">
+                    <span>2. Österreich</span>
+                    <input type="checkbox">
+                    <span>/</span>
+                    <span>Osterreich</span>
+                    <input type="checkbox">
+                </div>
+                <div class="checkbox-item">
+                    <span>3. Zürich</span>
+                    <input type="checkbox">
+                    <span>/</span>
+                    <span>Zurich</span>
+                    <input type="checkbox">
+                </div>
+                <div class="checkbox-item">
+                    <span>4. die Schweiz</span>
+                    <input type="checkbox">
+                    <span>/</span>
+                    <span>Schweiz</span>
+                    <input type="checkbox">
+                </div>
+                <div class="checkbox-item">
+                    <span>5. Hämburg</span>
+                    <input type="checkbox">
+                    <span>/</span>
+                    <span>Hamburg</span>
+                    <input type="checkbox">
+                </div>
+                <div class="checkbox-item">
+                    <span>6. Deitschland</span>
+                    <input type="checkbox">
+                    <span>/</span>
+                    <span>Deutschland</span>
+                    <input type="checkbox">
+                </div>
+            </div>
+        </section>
+        <section class="exercise">
+            <h2>B. Write the names of the three cities from A under the pictures.</h2>
             <div class="images">
-                <div class="image-box"><img src="monkey.png" alt="Monkey"><input class="input" type="text"></div>
-                <div class="image-box"><img src="chair.png" alt="Bench"><input class="input" type="text"></div>
-                <div class="image-box"><img src="mouse.png" alt="Mouse"><input class="input" type="text"></div>
-                <div class="image-box"><img src="bird.png" alt="Bird"><input class="input" type="text"></div>
-                <div class="image-box"><img src="food.png" alt="Food"><input class="input" type="text"></div>
-                <div class="image-box"><img src="dog.png" alt="Dog ear"><input class="input" type="text"></div>
+                <div class="image">
+                    <img src="vienna.png" alt="Vienna">
+                    <p>a. Das ist W ...............</p>
+                </div>
+                <div class="image">
+                    <img src="zurich.png" alt="Zurich">
+                    <p>b. Das ist Z ...............</p>
+                </div>
+                <div class="image">
+                    <img src="hamburg.png" alt="Hamburg">
+                    <p>c. Das ist H ...............</p>
+                </div>
             </div>
-        </div>
-        <div class="section">
-            <strong>4 Listen to the words. Fill in the missing vowels.</strong>
-            <div class="fill-blanks">
-                <div class="blank-box"><img src="aeiou.png" alt="AEIOU"></div>
-                <div class="blank-box"><img src="image.png" alt="Image"></div>
-            </div>
-        </div>
-    </div>
+        </section>
+        
+    </main>
 </body>
 </html>
